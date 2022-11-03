@@ -2,18 +2,17 @@ import RPi.GPIO as GPIO
 from time import sleep
 from signal import pause
 
-# Set Pin Constants
-led_pin = 11
+import constants as k
 
 # Setup Pins on board
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD) # using the board's numbering scheme
-GPIO.setup(led_pin, GPIO.OUT)
+GPIO.setup(k.led_pin, GPIO.OUT)
 
 # Main Logic
 
 while True:
-    GPIO.output(led_pin, True) 
+    GPIO.output(k.led_pin, True) 
     sleep(1) 
-    GPIO.output(led_pin, False) 
+    GPIO.output(k.led_pin, False) 
     sleep(1) 
