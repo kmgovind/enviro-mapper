@@ -1,14 +1,9 @@
 #Libraries
 import RPi.GPIO as GPIO
 import time
+from constants import *
 
-#set GPIO Pins
-LEFT_GPIO_TRIGGER = 18
-LEFT_GPIO_ECHO = 24
-RIGHT_GPIO_TRIGGER = 18
-RIGHT_GPIO_ECHO = 24
-CENTER_GPIO_TRIGGER = 18
-CENTER_GPIO_ECHO = 24
+
 
 
 

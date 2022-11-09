@@ -15,3 +15,8 @@ while True:
 	sleep(1)
 	GPIO.output(k.RMotorFW, False)
 	sleep(1)
+
+def drive_forward(inches):
+	pass
+def turn_to(degrees):
+	pass
