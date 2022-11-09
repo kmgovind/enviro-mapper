@@ -8,6 +8,13 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD) # using the board's numbering scheme
 GPIO.setup(k.RMotorFW, GPIO.OUT)
 
+
+def drive_forward(inches):
+	pass
+def turn_to(degrees):
+	pass
+
+
 # Main Logic
 while True:
 	# Toggle RMotorFW On/Off
@@ -16,7 +23,3 @@ while True:
 	GPIO.output(k.RMotorFW, False)
 	sleep(1)
 
-def drive_forward(inches):
-	pass
-def turn_to(degrees):
-	pass
