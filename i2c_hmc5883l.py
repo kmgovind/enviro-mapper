@@ -93,7 +93,7 @@ class HMC5883(object):
         self.scale_reg = self.scale_reg << 5
         self.set_option(self.ConfigurationRegisterB, self.scale_reg)
         if debug == True:
-        	print("HMC5883L set : gauss "+gauss+", scale "+scale)
+        	print("HMC5883L set : gauss "+gauss+", scale "+self.scale)
 
     def set_option(self, register, *function_set):
         options = 0x00
