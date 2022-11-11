@@ -13,11 +13,11 @@ class WallTracker():
         self.readings = []
         self.positions = []
         
-    def take_reading_move_forward(self,inchesMoved):
+    def take_reading_move_forward(self,cmMoved):
         ultrasonic_result = get_all_distance()
         compass_result = return_heading()
-        x_movement = inchesMoved*sin(compass_result)
-        y_movement = inchesMoved*cos(compass_result)
+        x_movement = cmMoved*sin(compass_result)
+        y_movement = cmMoved*cos(compass_result)
         self.X = self.X +x_movement
         self.Y = self.Y + y_movement
         self.heading = compass_result

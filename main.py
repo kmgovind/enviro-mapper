@@ -17,8 +17,8 @@ def main():
             turn_to(turn_deg)
             wall_tracker.take_reading_turn(turn_deg)
         else:
-            drive_forward(FORWARD_STEP_INCHES)
-            wall_tracker.take_reading_move_forward(FORWARD_STEP_INCHES)
+            drive_forward(FORWARD_STEP_CM)
+            wall_tracker.take_reading_move_forward(FORWARD_STEP_CM)
         
         wall_tracker.export_results('results.json')
 

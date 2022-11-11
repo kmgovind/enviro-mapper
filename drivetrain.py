@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BOARD) # using the board's numbering scheme
 GPIO.setup(k.RMotorFW, GPIO.OUT)
 
 
-def drive_forward(inches):
+def drive_forward(cm):
 	pass
 def turn_to(degrees):
 	pass
