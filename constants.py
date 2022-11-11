@@ -1,7 +1,12 @@
 import RPi.GPIO as GPIO
 
-# hardware PWM available on GPIO12, GPIO13, GPIO18, GPIO19
+# Algorithm Variables
+COLLISION_THRESHOLD = 10
+FORWARD_STEP_INCHES = 0.1
+LOWER_TURN_LIMIT = 90
+HIGHER_TURN_LIMIT = 180
 
+#GPIO Motor Pins
 RMotorFW = 12
 RMotorRV = 13
 LMotorFW = 18
