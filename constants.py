@@ -1,15 +1,9 @@
-
 # Algorithm Variables
 COLLISION_THRESHOLD = 10
 FORWARD_STEP_CM = 0.1
 LOWER_TURN_LIMIT = 90
 HIGHER_TURN_LIMIT = 180
 SENSOR_THRESHOLD = 10
-#GPIO Motor Pins
-RMotorFW = 12
-RMotorRV = 13
-LMotorFW = 18
-LMotorRV = 19
 
 #setup Ultrasonic GPIO Pins
 LEFT_GPIO_TRIGGER = 18
@@ -18,3 +12,19 @@ RIGHT_GPIO_TRIGGER = 18
 RIGHT_GPIO_ECHO = 24
 CENTER_GPIO_TRIGGER = 18
 CENTER_GPIO_ECHO = 24
+
+# GPIO Motor Pins
+R_MOTOR_FW = 12
+R_MOTOR_RV = 13
+L_MOTOR_FW = 18
+L_MOTOR_RV = 19
+
+# Encoder Pin
+R_MOTOR_ENC = 10
+R_MOTOR_VAL = 8
+L_MOTOR_ENC = 11
+L_MOTOR_VAL = 9
+
+# Drivetrain Constants
+LR_BIAS = 1.05  # INCREASING makes the left motor go faster DECREASING makes it go slightly slower
+PWM_FREQ = 100

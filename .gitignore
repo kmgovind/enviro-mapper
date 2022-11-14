@@ -1,3 +1,4 @@
-arduino_code.c
+*.c
+*.ino
 gpio_test.py
 *.pyc
