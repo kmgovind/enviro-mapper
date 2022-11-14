@@ -15,7 +15,7 @@ def main():
     while True:
         ultrasonic_result = get_all_distance()
         center_distance = ultrasonic_result['center']
-        if center_distance > COLLISION_THRESHOLD:
+        if center_distance < COLLISION_THRESHOLD:
             turn_deg = randrange(LOWER_TURN_LIMIT, HIGHER_TURN_LIMIT+1)
             turn_to(turn_deg)
             wall_tracker.take_reading_turn(turn_deg)
