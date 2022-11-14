@@ -21,7 +21,7 @@ def setup_dt():
 
 # Setup Pins
     GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)  # using the board's numbering scheme
+    GPIO.setmode(GPIO.BCM)  # using the board's numbering scheme
 
     # Pins
     GPIO.setup(k.R_MOTOR_FW, GPIO.OUT)
