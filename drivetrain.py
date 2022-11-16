@@ -50,6 +50,11 @@ def drive_forward(cm):
     posL = 0
     # 0.225 * 2.54 is cm per step of encoder
     distcomp = np.floor(cm/(0.225 * 2.54))
+    
+    # Activate Motors
+    GPIO.output(k.R_MOTOR_ACTV, True)
+    GPIO.output(k.L_MOTOR_ACTV, True)
+    
     while ((posR < distcomp) or (posL < distcomp)):
 
         # Compute necessary powers
@@ -67,10 +72,13 @@ def drive_forward(cm):
         # Drive forward pins
         rfw.start(moveratioR)
         lfw.start(moveratioL)
-
+        
     rfw.stop()
     lfw.stop()
 
+    # Deactivate Motors
+    GPIO.output(k.R_MOTOR_ACTV, False)
+    GPIO.output(k.L_MOTOR_ACTV, False)
 
 def turn_to(degrees):
     global posR, posL
@@ -78,6 +86,11 @@ def turn_to(degrees):
     posL = 0
     degree = (((degrees/360) * (17.687 * 2.54))/(0.225 * 2.54))
     degreesteps = np.floor(degree)
+    
+    # Activate Motors
+    GPIO.output(k.R_MOTOR_ACTV, True)
+    GPIO.output(k.L_MOTOR_ACTV, True)
+    
     while ((posR < degreesteps) or (posL < degreesteps)):
         moveratioR = ((degreesteps - posR)/degreesteps) * 100
         moveratioL = ((degreesteps - posL)/degreesteps) * k.LR_BIAS * 100
@@ -88,9 +101,18 @@ def turn_to(degrees):
 
     rfw.stop()
     lrv.stop()
+    
+    # Deactivate Motors
+    GPIO.output(k.R_MOTOR_ACTV, False)
+    GPIO.output(k.L_MOTOR_ACTV, False)
 
 
 def brake(seconds):
+    # Deactivate Motors
+    GPIO.output(k.R_MOTOR_ACTV, False)
+    GPIO.output(k.L_MOTOR_ACTV, False)
+   
+    #Stop Motor Control Singal
     GPIO.output(k.R_MOTOR_RV, False)
     GPIO.output(k.R_MOTOR_FW, False)
     GPIO.output(k.L_MOTOR_RV, False)
