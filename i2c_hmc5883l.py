@@ -107,12 +107,12 @@ class HMC5883(object):
         magno_z = self.i2c.read_word_2c(self.AxisZDataRegisterMSB)
 
         if (magno_x == -4096):
-            magno_x = None
+            magno_x = 0
         else:
             magno_x = round(magno_x * self.scale, 4)
 
         if (magno_y == -4096):
-            magno_y = None
+            magno_y = 0
         else:
             magno_y = round(magno_y * self.scale, 4)
 
