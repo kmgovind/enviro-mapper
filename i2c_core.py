@@ -97,7 +97,6 @@ class i2c_core:
 			result = ((result << 8) & 0xFF00) + (result >> 8)
 		return result
 
-	# Reads a signed 16-bit value from the I2C device
 	def read_word_S16(self, adr, little_endian=True):
 		val = self.read_word_U16(adr,little_endian)
 		if (val >= 32768):
