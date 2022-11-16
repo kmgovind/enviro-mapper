@@ -74,12 +74,12 @@ def drive_forward(cm):
         # Drive forward pins
         if (moveratioL > 100):
             moveratioL = 100
-        if (moveratioL < 0):
-            moveratioL = 0
+        if (moveratioL < 25):
+            moveratioL = 25
         if (moveratioR > 100):
             moveratioR = 100
-        if (moveratioR < 0):
-            moveratioR = 0
+        if (moveratioR < 25):
+            moveratioR = 25
         rfw.start(moveratioR)
         lfw.start(moveratioL)
         
@@ -106,12 +106,12 @@ def turn_to(degrees):
         moveratioL = ((degreesteps - posL)/degreesteps) * k.LR_BIAS * 100
         if (moveratioL > 100):
             moveratioL = 100
-        if (moveratioL < 0):
-            moveratioL = 0
+        if (moveratioL < 25):
+            moveratioL = 25
         if (moveratioR > 100):
             moveratioR = 100
-        if (moveratioR < 0):
-            moveratioR = 0
+        if (moveratioR < 25):
+            moveratioR = 25
         GPIO.output(k.R_MOTOR_RV, False)
         GPIO.output(k.L_MOTOR_FW, False)
         rfw.start(moveratioR)
