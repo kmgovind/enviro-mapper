@@ -91,7 +91,6 @@ class i2c_core:
 	def read_block(self, start, length):
 		return self.bus.read_i2c_block_data(self.address, start, length)
 
-	# Reads a unsigned 16-bit value from the I2C device #
 	def read_word_U16(self, adr, little_endian=True):
 		result = self.bus.read_byte_data(self.address, adr)
 		if not little_endian:
