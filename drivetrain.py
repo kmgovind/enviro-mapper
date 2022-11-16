@@ -24,10 +24,12 @@ def setup_dt():
     GPIO.setmode(GPIO.BCM)  # using the board's numbering scheme
 
     # Pins
+    GPIO.setup(k.R_MOTOR_ACTV, GPIO.OUT)
     GPIO.setup(k.R_MOTOR_FW, GPIO.OUT)
     GPIO.setup(k.R_MOTOR_RV, GPIO.OUT)
     GPIO.setup(k.R_MOTOR_ENC, GPIO.IN, pull_up_down=GPIO.PUD_UP)
     GPIO.setup(k.R_MOTOR_VAL, GPIO.IN)
+    GPIO.setup(k.L_MOTOR_ACTV, GPIO.OUT)
     GPIO.setup(k.L_MOTOR_FW, GPIO.OUT)
     GPIO.setup(k.L_MOTOR_RV, GPIO.OUT)
     GPIO.setup(k.L_MOTOR_ENC, GPIO.IN, pull_up_down=GPIO.PUD_UP)
