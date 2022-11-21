@@ -9,7 +9,7 @@ class WallTracker():
     def __init__(self) -> None:
         self.X = 0
         self.Y = 0
-        self.heading = None
+        self.heading = 0
         self.readings = []
         self.positions = []
         

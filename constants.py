@@ -1,6 +1,6 @@
 # Algorithm Variables
 COLLISION_THRESHOLD = 10
-FORWARD_STEP_CM = 0.1
+FORWARD_STEP_CM = 1
 LOWER_TURN_LIMIT = 90
 HIGHER_TURN_LIMIT = 180
 SENSOR_THRESHOLD = 10
@@ -28,5 +28,5 @@ L_MOTOR_ENC = 8
 L_MOTOR_VAL = 7
 
 # Drivetrain Constants
-LR_BIAS = 1.05  # INCREASING makes the left motor go faster DECREASING makes it go slightly slower
+LR_BIAS = 0.88  # INCREASING makes the left motor go faster DECREASING makes it go slightly slower
 PWM_FREQ = 100
