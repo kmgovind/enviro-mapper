@@ -1,6 +1,6 @@
 from random import randrange
 
-from compass import return_heading
+#from compass import return_heading
 from constants import *
 from drivetrain import *
 from ultrasonic import get_all_distance, setup_ultrasonic
