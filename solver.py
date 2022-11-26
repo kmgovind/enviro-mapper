@@ -84,7 +84,7 @@ def heuristic(nearby, endTile):
     return abs(nearby.getX() - endTile.getX()) + abs(nearby.getY() - endTile.getY())
 
 def findRoute(map, startTile, endTile, x_bound, y_bound):
-    neighbors = ((0, -1), (0, 1), (-1, 0), (1, 0),)
+    neighbors = ((0, -1), (0, 1), (-1, 0), (1, 0),(-1, -1), (1,1), (-1, 1), (1, -1))
     open_list = []
     closed_list = []
 
