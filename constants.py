@@ -3,7 +3,7 @@ COLLISION_THRESHOLD = 10
 FORWARD_STEP_CM = 1
 LOWER_TURN_LIMIT = 90
 HIGHER_TURN_LIMIT = 180
-SENSOR_THRESHOLD = 10
+SENSOR_THRESHOLD = 50
 
 #setup Ultrasonic GPIO Pins
 LEFT_GPIO_TRIGGER = 4
@@ -29,4 +29,5 @@ L_MOTOR_VAL = 7
 
 # Drivetrain Constants
 LR_BIAS = 0.88  # INCREASING makes the left motor go faster DECREASING makes it go slightly slower
+LR_BIAS_forward = 1
 PWM_FREQ = 100
