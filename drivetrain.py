@@ -61,7 +61,7 @@ def drive_forward(cm):
 
         # Compute necessary powers
         moveratioR = ((distcomp - posR)/distcomp) * 100
-        moveratioL = ((distcomp - posL)/distcomp) * k.LR_BIAS * 100
+        moveratioL = ((distcomp - posL)/distcomp) * k.LR_BIAS_forward * 100
         # spdR = np.interp(moveratioR, [0, 105], [70, 200])
         # spdL = np.interp(moveratioL, [0, 105], [70, 200])
         # np.clip(spdR, 50, 200, out=spdR)
