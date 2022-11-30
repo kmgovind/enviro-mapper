@@ -74,12 +74,12 @@ def drive_forward(cm):
         # Drive forward pins
         if (moveratioL > 100):
             moveratioL = 100
-        if (moveratioL < 25):
-            moveratioL = 25
+        if (moveratioL < 10):
+            moveratioL = 10
         if (moveratioR > 100):
             moveratioR = 100
-        if (moveratioR < 25):
-            moveratioR = 25
+        if (moveratioR < 10):
+            moveratioR = 10
         rfw.start(moveratioR)
         lfw.start(moveratioL)
         
