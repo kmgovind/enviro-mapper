@@ -92,12 +92,13 @@ def drive_forward(cm):
 
 def turn_to_readings(degrees,wall_tracker):
     degrees_to_measure = list(range(0,degrees,k.TURN_GRADIENT))
-    degrees.append(degrees)
+    degrees_to_measure.append(degrees)
     lastDegree = 0
-    for i in degrees:
+    for i in degrees_to_measure:
         degreeChange = i - lastDegree
         turn_to(degreeChange)
         wall_tracker.take_reading_turn(degreeChange)
+        lastDegree = i
 
 def turn_to(degrees):
     
