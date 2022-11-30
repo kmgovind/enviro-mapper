@@ -90,7 +90,17 @@ def drive_forward(cm):
     GPIO.output(k.R_MOTOR_ACTV, False)
     GPIO.output(k.L_MOTOR_ACTV, False)
 
+def turn_to_readings(degrees,wall_tracker):
+    degrees_to_measure = list(range(0,degrees,k.TURN_GRADIENT))
+    degrees.append(degrees)
+    lastDegree = 0
+    for i in degrees:
+        degreeChange = i - lastDegree
+        turn_to(degreeChange)
+        wall_tracker.take_reading_turn(degreeChange)
+
 def turn_to(degrees):
+    
     global posR, posL
     posR = 0
     posL = 0
