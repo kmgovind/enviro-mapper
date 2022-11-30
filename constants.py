@@ -29,6 +29,6 @@ L_MOTOR_ENC = 8
 L_MOTOR_VAL = 7
 
 # Drivetrain Constants
-LR_BIAS = 0.88  # INCREASING makes the left motor go faster DECREASING makes it go slightly slower
+LR_BIAS = 0.80  # INCREASING makes the left motor go faster DECREASING makes it go slightly slower
 LR_BIAS_forward = 1.05
 PWM_FREQ = 100
